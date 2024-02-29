@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Jugadores de la NBA</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-image: url('nbalogo.jpg');
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .section hr {
+      width: 100%;
+      border: 1px solid #ccc;
+      margin: 10px 0;
+    }
+
+    .section label {
+      display: block;
+      margin-bottom: 8px;
+      color: #555;
+    }
+
+    .section input {
+      width: calc(50% - 10px);
+      padding: 8px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .devengos, .deducciones {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .devengos label, .deducciones label {
+      width: 50%;
+      margin-bottom: 8px;
+      color: #555;
+    }
+
+    .devengos input, .deducciones input {
+      width: calc(50% - 10px);
+      padding: 8px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="submit"] {
+      background-color: #4caf50;
+      color: #fff;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="procesar_formulario.php" method="post">
+    <h2>Formulario de Jugadores de la NBA</h2>
+
+    <!-- Datos de la Empresa y Trabajador -->
+     <div class="section">
+    <div style="width: 50%;">
+      <h3 style="text-align: left; margin-bottom: 10px;">Empresa</h3>
+      <label for="nombre_empresa">Nombre de la Empresa:</label>
+      <input type="text" id="nombre_empresa" name="nombre_empresa" required style="width: auto;">
+
+      <label for="domicilio_empresa">Domicilio de la Empresa:</label>
+      <input type="text" id="domicilio_empresa" name="domicilio_empresa" style="width: auto;">
+
+      <label for="cif_empresa">CIF de la Empresa:</label>
+      <input type="text" id="cif_empresa" name="cif_empresa" style="width: auto;">
+
+      <label for="codigo_cotizacion_ss">Código Cuenta de Cotización a la S.S.:</label>
+      <input type="text" id="codigo_cotizacion_ss" name="codigo_cotizacion_ss" style="width: auto;">
+    </div>
+
+    <div style="width: 50%; text-align: right; margin-top: 20px;">
+      <h3 style="text-align: right; margin-bottom: 10px;">Trabajador</h3>
+      <label for="nombre_trabajador">Nombre del Trabajador:</label>
+      <input type="text" id="nombre_trabajador" name="nombre_trabajador" required style="width: auto;">
+
+      <label for="dni_trabajador">DNI del Trabajador:</label>
+      <input type="text" id="dni_trabajador" name="dni_trabajador" style="width: auto;">
+
+      <label for="categoria_profesional">Categoría o Grupo Profesional:</label>
+      <input type="text" id="categoria_profesional" name="categoria_profesional" style="width: auto;">
+
+      <label for="grupo_cotizacion">Grupo de Cotización:</label>
+      <input type="text" id="grupo_cotizacion" name="grupo_cotizacion" style="width: auto;">
+
+      <label for="fecha_antiguedad">Fecha de Antigüedad:</label>
+      <input type="text" id="fecha_antiguedad" name="fecha_antiguedad" style="width: auto;">
+    </div>
+	</div>
+  <hr>
+    <!-- Periodo de Liquidación -->
+    <h3 style="text-align: center; margin-bottom: 20px;">Periodo de Liquidación</h3>
+
+  <div class="section">
+    <label for="periodo_inicial">Fecha Inicial:</label>
+    <input type="text" id="periodo_inicial" name="periodo_inicial" style="width: auto;">
+
+    <label for="periodo_final">Fecha Final:</label>
+    <input type="text" id="periodo_final" name="periodo_final" style="width: auto;">
+
+    <div style="flex: 1;"></div>
+
+    <label for="total_dias" style="font-size: smaller;">Total Días:</label>
+    <input type="text" id="total_dias" name="total_dias" style="width: auto;">
+  </div>
+
+    <hr>
+
+    <!-- Devengos -->
+	<h3 style="text-align: left; margin-bottom: 20px;">DEVENGOS</h3>
+    <div class="devengos">
+      <div>
+        <label for="salario_base">Salario Base:</label>
+        <input type="text" id="salario_base" name="salario_base"><br><br>
+		<label for="complementos_salariales">Complementos Salariales TOTAL:</label>
+    <input type="text" id="complementos_salariales" name="complementos_salariales"><br><br>
+	
+
+    <label for="complemento_ajuste">Antiguedad:</label>
+    <input type="text" id="antiguedad" name="antiguedad"><br><br>
+	<label for="complemento_ajuste">Otros:</label>
+    <input type="text" id="otros" name="otros"><br><br>
+
+    <label for="horas_extraordinarias">Horas Extraordinarias:</label>
+    <input type="text" id="horas_extraordinarias" name="horas_extraordinarias"><br><br>
+
+    <label for="incentivos">Incentivos:</label>
+    <input type="text" id="incentivos" name="incentivos"><br><br>
+
+    <label for="pagas_extraordinarias">Pagas Extraordinarias:</label>
+    <input type="text" id="pagas_extraordinarias" name="pagas_extraordinarias"><br><br>
+	<label for="complementos_salariales">Complementos NO Salariales TOTAL:</label>
+    <input type="text" id="complementos_nosalariales" name="complementos_nosalariales"><br><br>
+
+    <label for="dietas">Dietas:</label>
+    <input type="text" id="dietas" name="dietas"><br><br>
+
+    <label for="plus_transporte">Plus de Transporte:</label>
+    <input type="text" id="plus_transporte" name="plus_transporte"><br><br>
+
+    <label for="pagos_incapacidad_temporal">Pagos por Incapacidad Temporal:</label>
+    <input type="text" id="pagos_incapacidad_temporal" name="pagos_incapacidad_temporal"><br><br>
+
+    <label for="complementos_incapacidad_temporal">Complementos por Incapacidad Temporal:</label>
+    <input type="text" id="complementos_incapacidad_temporal" name="complementos_incapacidad_temporal"><br><br>
+      </div>
+	  <hr>
+      <div>
+		<label for="total_devengado" style="text-align: right; margin-top: 20px;">TOTAL DEVENGADO:</label>
+		<input type="text" id="total_devengado" name="total_devengado">
+    </div>
+	</div>
+<hr>
+    <!-- Deducciones -->
+	<h3 style="text-align: left; margin-bottom: 20px;">DEDUCCIONES</h3>
+    <div class="deducciones">
+      <div>
+        <label for="contingencias_comunes"> Contingencias Comunes:</label>
+    <input type="text" id="contingencias_comunes" name="contingencias_comunes"><br><br>
+
+    <label for="desempleo">Desempleo:</label>
+    <input type="text" id="desempleo" name="desempleo"><br><br>
+
+    <label for="formacion_profesional">Formación Profesional:</label>
+    <input type="text" id="formacion_profesional" name="formacion_profesional"><br><br>
+
+    <label for="retenciones_irpf">Retenciones a Cuenta de IRPF:</label>
+    <input type="text" id="retenciones_irpf" name="retenciones_irpf"><br>
+      </div>
+<hr>
+      <div>
+        <label for="total_deducir">TOTAL A DEDUCIR:</label>
+        <input type="text" id="total_deducir" name="total_deducir">
+      </div>
+    </div>
+
+    <hr>
+
+    <h3 style="text-align: left; margin-bottom: 20px;">LIQUIDO A PERCIBIR</h3>
+    <div class="section">
+      <div>
+        <label for="liquido_percibir">LIQUIDO A PERCIBIR:</label>
+        <input type="text" id="liquido_percibir" name="liquido_percibir">
+      </div>
+    </div>
+
+    <input type="submit" value="Enviar">
+  </form>
+
+</body>
+</html>
