@@ -6,20 +6,19 @@
     <title>Document</title>
 </head>
 <style>
-       * {
+       *{
     margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
     vertical-align: baseline;
 }
-
-body {
+body{
     text-align: center;
     font-family: sans-serif;
 }
 
-.head {
+.head{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -28,24 +27,21 @@ body {
     position: fixed;
     width: 100%;
     z-index: 100;
-}
 
-.navbar {
-    display: flex;
+}
+.navbar{
+    display:flex;
     margin-right: 10px;
 }
-
-.logo {
+.logo{
     margin-left: 30px;
 }
-
 .logo a {
     text-decoration: none;
-    color: #fff;
+    color:#fff;
     text-transform: uppercase;
     font-size: 20px;
 }
-
 .navbar a {
     display: block;
     padding: 23px 20px;
@@ -54,38 +50,38 @@ body {
     text-transform: uppercase;
     font-size: 20px;
 }
-
 .navbar a:hover {
     background: #3f3f3f;
 }
-
-.header {
-    display: flex;
+.header{
+    display:flex;
     justify-content: center;
     align-items: center;
-}
 
-.header {
+}
+.header{
     height: 60vh !important;
     background: url(NBA.jpg) no-repeat center;
 }
 
-.title {
+.title{
     margin-bottom: 40px;
     font-size: 60%;
     font-weight: 600;
     text-transform: uppercase;
     color: #fff;
+
 }
 
-p {
+p{
     margin-bottom: 40px;
     font-size: 18px;
     color: #fff;
     padding: 0 100px;
+
 }
 
-.btn {
+.btn{
     display: inline-block;
     margin-top: 15px;
     padding: 10px 40px;
@@ -94,19 +90,16 @@ p {
     text-decoration: none;
     background: #9c27b0;
 }
-
-.btn:hover {
+.btn:hover{
     background: none;
 }
-
-.btn-home {
+.btn-home{
     display: flex;
-}
 
-.btn-home {
+}
+.btn-home{
     margin: 0 10px;
 }
-
 .content {
     height: 50vh;
     display: flex;
@@ -114,19 +107,16 @@ p {
     justify-content: center;
     align-items: center;
 }
-
-.clasificacion {
-    padding: 30px;
-    background: #1f1d1d;
+.clasificacion{
+padding: 30px;
+background: #1f1d1d;
 }
-
 .box-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     text-align: center;
 }
-
 .box-container .box {
     height: 11rem;
     width: 17rem;
@@ -136,8 +126,7 @@ p {
     box-shadow: 0.3rem 5rem rgba(0, 0, 0, .5);
     margin: 2rem;
 }
-
-.box-container .box i {
+.box-container .box i{
     height: 3rem;
     width: 3rem;
     line-height: 3rem;
@@ -148,39 +137,34 @@ p {
     font-size: 2rem;
     margin: 1rem 0;
 }
-
-.box-container .box h3 {
+.box-container .box h3{
     font-size: 20px;
     color: #9c27b0;
 }
-
-.box-container .box p {
+.box-container .box p{
     padding: 0 15px;
     font-size: 16px;
 }
-
-.partidos {
+.partidos{
     background: #171717;
 }
-
-.noticias {
+.noticias{
     background: url(noticias.jpg) no-repeat center;
     background-attachment: fixed;
-    background-size: cover;
+    background-size:cover;
     text-align: center;
 }
-
-.estadisticas {
+.estadisticas{
     padding-top: 20px;
     background: #171717;
     padding-bottom: 0;
 }
-
 .dropdown {
     float: left;
     overflow: hidden;
 }
 
+/* Estilos para el botón del desplegable */
 .dropbtn {
     display: block;
     padding: 23px 20px;
@@ -189,47 +173,42 @@ p {
     text-transform: uppercase;
     font-size: 20px;
     background-color: #171717;
-}
 
+}
+/* Estilos para el contenido del desplegable */
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: black;
     z-index: 1;
-    width: 400px; /* ajusta el ancho según necesites */
-    column-count: 2; /* divide los enlaces en dos columnas */
 }
 
-.dropdown-content a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    box-sizing: border-box;
-    text-align: center;
-}
-
+/* Cambia el color del enlace dentro del desplegable al pasar el mouse sobre él */
 .dropdown-content a:hover {
-    background-color: #3f3f3f;
+    background-color: #ddd;
+    color: black;
 }
 
+/* Muestra el contenido del desplegable al pasar el mouse sobre el botón */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
 @media (max-width: 768px) {
-    .title {
-        margin-bottom: 0;
-        font-size: 40px;
-    }
 
-    .clasificacion {
-        height: 120vh;
-    }
-
-    .navbar {
-        display: none;
-    }
+        .title{
+            margin-bottom: 0;
+            font-size: 40px;
+        }
+        .clasificacion{
+            height: 120vh;
+        }
+        .navbar{
+            display: none;
+        }
 }
+    
+    </style>
 <body>
 
 <div class= "head">
@@ -329,12 +308,12 @@ p {
        </section>
 
        <section class="content noticias">
-        <article class="contain">
-            <h2 class="title">Noticias</h2>
-            <p>Aquí encontrarás las últimas noticias de la NBA:</p>
-            <a href="https://www.espn.com/nba/" class="btn">Ver Noticias en ESPN NBA</a>
-        </article>
-    </section>
+            <article class="contain">
+                <h2 class="title">Noticias</h2>
+                <p>Aqui ponemos un enlace para las noticias que ocurren a diario en la NBA</p>
+            </article>
+
+       </section>
        <section class="content Estadisticas">
         <h2 class="title">Estadisticas</h2>
         <p>Aqui ponemos un enlace para las estadisticas de la NBA</p>
