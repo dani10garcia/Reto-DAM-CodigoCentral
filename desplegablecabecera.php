@@ -218,7 +218,7 @@ background: #1f1d1d;
             <nav class="navbar">
                 <a href="https://www.sportingnews.com/es/nba?gr=www">Inicio</a>
                 <a href="#">Partidos</a>
-                <a href="https://www.sportingnews.com/es/nba/noticias">Noticias</a>
+                <a href="Scripts.php">Aplicación BD</a>
                 <a href="https://es.global.nba.com/standings/">Clasificacion</a>
                 <a href="#">Estadisticas</a>
                     <div class="dropdown">
