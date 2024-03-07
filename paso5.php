@@ -18,7 +18,7 @@
     $text = "SELECT * FROM ".$selectedTable." WHERE ".$selectedCampo." LIKE '".$valor.";";
     // $text = "SELECT * FROM {$selectedTable} WHERE {$selectedCampo} LIKE '$valor'";
     echo "<form method='post' action='paso6.php'>";
-    echo "<input type='hidden' name='consulta' value='$text'>";
+    echo "<input type='hidden' name='valor' value='$valor'>";
     echo "<input type='hidden' name='BD' value='$selectedBD'>";
     echo "<input type='hidden' name='tabla' value='$selectedTable'>";
     echo "<input type='hidden' name='campo' value='$selectedCampo'>";

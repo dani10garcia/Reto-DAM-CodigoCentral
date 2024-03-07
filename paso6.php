@@ -4,6 +4,7 @@ if(isset($_POST['submitMostrar'])) {
     $selectedBD = $_POST['BD'];
     $selectedTable = $_POST['tabla'];
     $selectedCampo = $_POST['campo'];
+    $valor = $_POST['valor'];
 
     // Configurar la conexión a la base de datos (ajusta estos valores según tu configuración)
     $servername = "localhost";
@@ -39,8 +40,8 @@ if(isset($_POST['submitMostrar'])) {
         echo "</tr>";
 
         // Construir la consulta SQL dinámica
-        $query = "SELECT * FROM {$selectedTable}";
-
+        $query = "SELECT * FROM {$selectedTable} WHERE {$selectedCampo} LIKE '{$valor}'";
+        echo $query;
         // Ejecutar la consulta
         $result = $conn->query($query);
 
@@ -68,11 +69,3 @@ if(isset($_POST['submitMostrar'])) {
     $conn->close();
 }
 ?>
->
-
-
-
-
-
-
-

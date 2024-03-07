@@ -150,7 +150,7 @@
     <a href="https://www.sportingnews.com/es/nba?gr=www">Inicio</a>
     <a href="https://www.google.com/search?client=firefox-b-e&q=calendario+de+partidos+nba#cobssid=s&sie=lg;/g/11snv1vp6v;3;/m/05jvx;mt;fp;1;;;">Partidos</a>
     <a href="paso1.php">Aplicación BD</a>
-    <a href="#" onclick="mostrarEquipos()"> Equipos</a>
+    <a href="mostrarequipo.php"> Equipos</a>
     <?php
 require_once("conexion.php");
 
