@@ -1,258 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-       *{
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-}
-body{
-    text-align: center;
-    font-family: sans-serif;
-}
+    <title>NBA RETO</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-.head{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 63px;
-    background: #171717;
-    position: fixed;
-    width: 100%;
-    z-index: 100;
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('NBA.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+        }
 
-}
-.navbar{
-    display:flex;
-    margin-right: 10px;
-}
-.logo{
-    margin-left: 30px;
-}
-.logo a {
-    text-decoration: none;
-    color:#fff;
-    text-transform: uppercase;
-    font-size: 20px;
-}
-.navbar a {
-    display: block;
-    padding: 23px 20px;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 20px;
-}
-.navbar a:hover {
-    background: #3f3f3f;
-}
-.header{
-    display:flex;
-    justify-content: center;
-    align-items: center;
+        header, section, article {
+            padding: 50px 20px;
+        }
 
-}
-.header{
-    height: 60vh !important;
-    background: url(NBA.jpg) no-repeat center;
-}
+        .head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+        }
 
-.title{
-    margin-bottom: 40px;
-    font-size: 60%;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #fff;
+        .logo {
+            margin-left: 30px;
+        }
 
-}
+        .logo a {
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 24px;
+            font-weight: bold;
+        }
 
-p{
-    margin-bottom: 40px;
-    font-size: 18px;
-    color: #fff;
-    padding: 0 100px;
+        .navbar {
+            display: flex;
+        }
 
-}
+        .navbar a {
+            display: block;
+            padding: 20px;
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0 10px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
 
-.btn{
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 40px;
-    border: 2px solid #9c27b0;
-    color: #fff;
-    text-decoration: none;
-    background: #9c27b0;
-}
-.btn:hover{
-    background: none;
-}
-.btn-home{
-    display: flex;
+        .navbar a:hover {
+            background: #333;
+            color: #ffd700; /* Color dorado al pasar el ratón sobre el enlace */
+        }
 
-}
-.btn-home{
-    margin: 0 10px;
-}
-.content {
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.clasificacion{
-padding: 30px;
-background: #1f1d1d;
-}
-.box-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-}
-.box-container .box {
-    height: 11rem;
-    width: 17rem;
-    background: #101010;
-    text-align: center;
-    border-radius: 1rem;
-    box-shadow: 0.3rem 5rem rgba(0, 0, 0, .5);
-    margin: 2rem;
-}
-.box-container .box i{
-    height: 3rem;
-    width: 3rem;
-    line-height: 3rem;
-    text-align: center;
-    border-radius: 50%;
-    color: #fff;
-    background: #9c27b0;
-    font-size: 2rem;
-    margin: 1rem 0;
-}
-.box-container .box h3{
-    font-size: 20px;
-    color: #9c27b0;
-}
-.box-container .box p{
-    padding: 0 15px;
-    font-size: 16px;
-}
-.partidos{
-    background: #171717;
-}
-.noticias{
-    background: url(noticias.jpg) no-repeat center;
-    background-attachment: fixed;
-    background-size:cover;
-    text-align: center;
-}
-.estadisticas{
-    padding-top: 20px;
-    background: #171717;
-    padding-bottom: 0;
-}
-.dropdown {
-    float: left;
-    overflow: hidden;
-}
+        .content {
+            text-align: left;
+        }
 
-/* Estilos para el botón del desplegable */
-.dropbtn {
-    display: block;
-    padding: 23px 20px;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 20px;
-    background-color: #171717;
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
 
-}
-/* Estilos para el contenido del desplegable */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: black;
-    z-index: 1;
-}
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
 
-/* Cambia el color del enlace dentro del desplegable al pasar el mouse sobre él */
-.dropdown-content a:hover {
-    background-color: #ddd;
-    color: black;
-}
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border: 2px solid #fff;
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: bold;
+            background: transparent;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
 
-/* Muestra el contenido del desplegable al pasar el mouse sobre el botón */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
+        .btn:hover {
+            background: #fff;
+            color: #000;
+        }
 
-@media (max-width: 768px) {
+        .box-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
 
-        .title{
-            margin-bottom: 0;
+        .box {
+            flex: 0 1 calc(33.333% - 40px);
+            background: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            border-radius: 10px;
+            margin: 20px 0;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+        }
+
+        .box i {
+            display: block;
             font-size: 40px;
+            margin-bottom: 20px;
         }
-        .clasificacion{
-            height: 120vh;
+
+        .box h3 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
         }
-        .navbar{
-            display: none;
+
+        .box p {
+            font-size: 16px;
+            line-height: 1.6;
         }
-}
-    
     </style>
+</head>
+
 <body>
 
-<div class= "head">
-            <div class="logo">
-                <a href="NBA.jpg">Logo</a>
-            </div>
-            <nav class="navbar">
-                <a href="https://www.sportingnews.com/es/nba?gr=www">Inicio</a>
-                <a href="#">Partidos</a>
-                <a href="Scripts.php">Aplicación BD</a>
-                <a href="https://es.global.nba.com/standings/">Clasificacion</a>
-                <a href="#">Estadisticas</a>
-                    <div class="dropdown">
-                        <button class="dropbtn">EQUIPOS</button>
-                        <div class="dropdown-content">
-<?php
- 
-    require_once("conexion.php");
-    extract($_POST);
-    $param = $cnx->prepare("SELECT DISTINCT Nombre FROM equipos ");
-    $param->execute();
-    $data = $param->get_result();
-    while ($row = $data->fetch_assoc()) {
-        //fetch assoc devuelve un array o fila que se carga en la variable $row (la podremos llamar como queramos)//
-        extract($row); //Extraemos cada fila y creamos los tr y td//
-        //echo " <option value='$Nombre'>$Nombre </option>";
-        echo " <a href='https://www.nba.com/team/atlanta-hawks'> $Nombre </a>";
-
-    }
-    $cnx->close();
-?>    
- <a href="#">Jugadores</a>
-                <a href="#">Nominas</a>
-            </nav>
+    <div class="head">
+        <div class="logo">
+            <a href="#NBA.jpg">NBA RETO</a>
         </div>
-        <header class="content header">
-            
-        </header>
-       <section class="content Clasificacion">
-            
-            <div class="box-container">
-                <div class="box">
-                    <i class="fab fa-oeste"></i>
-                    <h3>Conferencia Oeste</h3>
+        <nav class="navbar">
+    <a href="https://www.sportingnews.com/es/nba?gr=www">Inicio</a>
+    <a href="https://www.google.com/search?client=firefox-b-e&q=calendario+de+partidos+nba#cobssid=s&sie=lg;/g/11snv1vp6v;3;/m/05jvx;mt;fp;1;;;">Partidos</a>
+    <a href="https://www.sportingnews.com/es/nba/noticias">Noticias</a>
+    <a href="#" onclick="mostrarEquipos()"> Equipos</a>
+    <?php
+require_once("conexion.php");
+
+// Consultar la base de datos para obtener la lista de equipos
+$query = "SELECT DISTINCT Nombre FROM equipos";
+$result = $cnx->query($query);
+
+// Verificar si hay resultados
+if ($result->num_rows > 0) {
+    // Iniciar el desplegable
+    echo '<select name="equipos" id="equipos">';
+    
+    // Iterar sobre los resultados y generar opciones
+    while ($row = $result->fetch_assoc()) {
+        echo '<option value="' . $row['Nombre'] . '">' . $row['Nombre'] . '</option>';
+    }
+
+    // Cerrar el desplegable
+    echo '</select>';
+} else {
+    // Si no hay equipos en la base de datos
+    echo 'No se encontraron equipos.';
+}
+
+// Cerrar la conexión
+$cnx->close();
+?>
+    <a href="">Jugadores TOP</a>
+    <a href="Nomina2.php">Nominas</a>
+    <a href="https://es.global.nba.com/standings/">Clasificacion</a>
+    <a href="jugadoresTOP.php">Estadisticas</a>
+</nav>
+
+    </div>
+    <header class="content">
+        <h1 class="title">Descubre la emoción de la NBA</h1>
+    </header>
+
+    <section class="content">
+        <div class="box-container">
+            <div class="box">
+                <i class="fas fa-trophy"></i>
+                <h3>Conferencia Oeste</h3>
                     <p>Equipos de la conferencia oeste:<br>
                         -Dallas Mavericks<br>
                         -Denver Nuggets
@@ -264,11 +205,11 @@ background: #1f1d1d;
                         -Sacramento Kings-Spurs<br>
                         -Utah Jazz
                     </p>
-                </div>
-                <div class="box">
-                    <i class="fab fa-este"></i>
-                    <h3>Conferencia este</h3>
-                    <p>Equipos de la conferencia este:
+            </div>
+            <div class="box">
+                <i class="fas fa-trophy"></i>
+                <h3>Conferencia Este</h3>
+                <p>Equipos de la conferencia este:
                         -Atlanta Hawks -Boston Celtics <br>
                           -Charlotte Hornets -Chicago Bulls<br>
                          -Cleveland Cavaliers -Detroit Pistons<br>
@@ -278,11 +219,11 @@ background: #1f1d1d;
                          - Philadelphia 76ers -Toronto Raptors <br>
                          -Washington Wizards
                     </p>
-                </div>
-                <div class="box">
-                    <i class="fab fa-playoffs"></i>
-                    <h3>Playoffs temporada pasada</h3>
-                    <p>Equipos ganadores de la NBA ultimos 10 años:<br>
+            </div>
+            <div class="box">
+                <i class="fas fa-trophy"></i>
+                <h3>Playoffs Temporada Pasada</h3>
+                <p>Equipos ganadores de la NBA ultimos 10 años:<br>
                         2013-2014: San Antonio Spurs<br>
                         2014-2015:  Warriors<br>
                         2015-2016: Cleveland Cavaliers<br>
@@ -295,28 +236,20 @@ background: #1f1d1d;
                         2022-2023: Denver Nuggets<br>
 
                     </p>
-                </div>
-
-                </div>
             </div>
-       </section> 
-       <section class="content partidos">
-            <h2 class="title">Partidos</h2>
-            <p>En este apartado aparecen los partidos que se juegan durante la temporada 23/24 en la NBA</p>
-            <a href=""class="btn">Calendario de Partidos</a>
-             
-       </section>
+        </div>
+    </section>
+    <section class="content">
+        <h2 class="title">Grupo de Trabajo</h2>
+        <p>Esta pagina web ha sido creada por:
+            Christian Ayllon, 
+            Daniel Valiente,
+            Daniel Garcia y 
+            Jesus Zancada
+        </p>
+        <img src="logocodigocentral.png" alt="Logo del grupo de estudiantes" style="max-width: 100%; height: auto;">
+    </section>
 
-       <section class="content noticias">
-            <article class="contain">
-                <h2 class="title">Noticias</h2>
-                <p>Aqui ponemos un enlace para las noticias que ocurren a diario en la NBA</p>
-            </article>
+</body>
 
-       </section>
-       <section class="content Estadisticas">
-        <h2 class="title">Estadisticas</h2>
-        <p>Aqui ponemos un enlace para las estadisticas de la NBA</p>
-       </section>
-    </body>
 </html>
