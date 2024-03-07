@@ -149,7 +149,7 @@
         <nav class="navbar">
     <a href="https://www.sportingnews.com/es/nba?gr=www">Inicio</a>
     <a href="https://www.google.com/search?client=firefox-b-e&q=calendario+de+partidos+nba#cobssid=s&sie=lg;/g/11snv1vp6v;3;/m/05jvx;mt;fp;1;;;">Partidos</a>
-    <a href="https://www.sportingnews.com/es/nba/noticias">Noticias</a>
+    <a href="paso1.php">Aplicación BD</a>
     <a href="#" onclick="mostrarEquipos()"> Equipos</a>
     <?php
 require_once("conexion.php");
@@ -178,10 +178,9 @@ if ($result->num_rows > 0) {
 // Cerrar la conexión
 $cnx->close();
 ?>
-    <a href="">Jugadores TOP</a>
+    <a href="jugadoresTOP.php">Jugadores TOP</a>
     <a href="Nomina2.php">Nominas</a>
     <a href="https://es.global.nba.com/standings/">Clasificacion</a>
-    <a href="jugadoresTOP.php">Estadisticas</a>
 </nav>
 
     </div>
