@@ -74,7 +74,7 @@
                 ?>
                 
                 <section>
-                    <form name="form1" id="form1" method="post" action="DesplegableEquipos.php">
+                    <form name="form1" id="form1" method="post" action="mostrarequipo.php">
                     <input type="submit" class="btn btn-dark" value="Mostrar Jugadores">
                     <select name='filtro' id='filtro'>
 <?php
@@ -139,7 +139,7 @@
                     <tfoot>
                         <tr>
                             <td colspan="6" class="text-center">
-                                <a href="DesplegableEquipos.php" class="btn btn-secondary">Volver</a>
+                                <a href="mostrarequipo.php" class="btn btn-secondary">Volver</a>
                             </td>
                         </tr>
                     </tfoot>
