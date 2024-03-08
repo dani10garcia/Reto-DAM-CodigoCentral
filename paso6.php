@@ -1,3 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mostrar Resultados</title>
+<style>
+    /* Estilos generales */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #333; /* Cambiado a gris oscuro casi negro */
+        color: #fff; /* Cambiado a blanco para contrastar */
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th, td {
+        padding: 10px;
+        border: 1px solid #fff;
+    }
+
+    th {
+        background-color: #444;
+    }
+
+    td {
+        background-color: #555;
+    }
+</style>
+</head>
+<body>
+
 <?php
 if(isset($_POST['submitMostrar'])) {
     // Recoger los valores seleccionados del formulario del Paso 5
@@ -31,7 +73,7 @@ if(isset($_POST['submitMostrar'])) {
     if ($columns_result->num_rows > 0) {
         // Mostrar los resultados en una tabla
         echo "<h2>Paso 6: Mostrar resultados en una tabla</h2>";
-        echo "<table border='1'>";
+        echo "<table>";
         echo "<tr>";
         // Mostrar los nombres de las columnas
         while ($column = $columns_result->fetch_assoc()) {
@@ -41,7 +83,7 @@ if(isset($_POST['submitMostrar'])) {
 
         // Construir la consulta SQL dinámica
         $query = "SELECT * FROM {$selectedTable} WHERE {$selectedCampo} LIKE '{$valor}'";
-        echo $query;
+        
         // Ejecutar la consulta
         $result = $conn->query($query);
 
@@ -69,3 +111,5 @@ if(isset($_POST['submitMostrar'])) {
     $conn->close();
 }
 ?>
+</body>
+</html>
