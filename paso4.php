@@ -100,6 +100,8 @@ if(isset($_GET['submitCampo'])) {
     echo "<input type='hidden' name='tabla' value='$selectedTable'>";
     echo "<input type='hidden' name='campo' value='$selectedField'>";
     echo "<input type='submit' name='submitCriterio' value='Establecer'>";
+    // Botón de retroceso al Paso 3
+    echo "<input type='button' value='Retroceder' onclick='window.history.back();'>";
     echo "</form>";
 }
 ?>

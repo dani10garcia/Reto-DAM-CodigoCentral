@@ -36,6 +36,20 @@
     td {
         background-color: #555;
     }
+
+    input[type="submit"], input[type="button"] {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover, input[type="button"]:hover {
+        background-color: #0056b3;
+    }
 </style>
 </head>
 <body>
@@ -103,6 +117,8 @@ if(isset($_POST['submitMostrar'])) {
         }
 
         echo "</table>";
+        // Botón de retroceso al Paso 5
+        echo "<input type='button' value='Retroceder' onclick='window.history.back();'>";
     } else {
         echo "La tabla seleccionada no tiene columnas.";
     }

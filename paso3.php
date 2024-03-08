@@ -27,7 +27,7 @@
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     }
 
-    select, input[type="submit"] {
+    select, input[type="submit"], input[type="button"] {
         display: block;
         width: 100%;
         padding: 10px;
@@ -43,13 +43,13 @@
         background-color: #666; /* Cambiado a un tono de gris más oscuro */
     }
 
-    input[type="submit"] {
+    input[type="submit"], input[type="button"] {
         background-color: #007bff;
         color: #fff;
         cursor: pointer;
     }
 
-    input[type="submit"]:hover {
+    input[type="submit"]:hover, input[type="button"]:hover {
         background-color: #0056b3;
     }
 </style>
@@ -115,6 +115,8 @@ if(isset($_GET['submitTabla'])) {
         
         // Botón de envío
         echo "<input type='submit' name='submitCampo' value='Seleccionar'>";
+        // Botón de retroceso al Paso 2
+        echo "<input type='button' value='Retroceder' onclick='window.history.back();'>";
         echo "</form>";
 
         // Cerrar la conexión

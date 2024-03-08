@@ -27,7 +27,7 @@
         text-align: center;
     }
 
-    input[type="submit"] {
+    input[type="submit"], input[type="button"] {
         padding: 10px 20px;
         border: none;
         border-radius: 5px;
@@ -37,7 +37,7 @@
         cursor: pointer;
     }
 
-    input[type="submit"]:hover {
+    input[type="submit"]:hover, input[type="button"]:hover {
         background-color: #0056b3;
     }
 </style>
@@ -69,6 +69,8 @@ echo "<input type='hidden' name='BD' value='$selectedBD'>";
 echo "<input type='hidden' name='tabla' value='$selectedTable'>";
 echo "<input type='hidden' name='campo' value='$selectedCampo'>";
 echo "<input type='submit' name='submitMostrar' value='Mostrar en una tabla'>";
+// Botón de retroceso al Paso 4
+echo "<input type='button' value='Retroceder' onclick='window.history.back();'>";
 echo "</form>";
 
 ?>
