@@ -13,6 +13,6 @@
     
     else {
         $cnx->query("SET NAMES utf8mb4");
-        echo "He conectado";
+        echo "";
     }
 ?>

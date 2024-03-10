@@ -4,16 +4,30 @@
     <meta charset="utf-8">
     <title>Estadísticas</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: #fff;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 20px;
         }
+
         th, td {
             padding: 10px;
             border: 1px solid #dddddd;
             text-align: left;
         }
+
         th {
             background-color: #f2f2f2;
         }
@@ -48,4 +62,3 @@
     ?>
 </body>
 </html>
-
