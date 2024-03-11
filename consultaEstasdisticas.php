@@ -29,7 +29,7 @@
         }
 
         th {
-            background-color: #f2f2f2;
+            background-color: Black;
         }
     </style>
 </head>
